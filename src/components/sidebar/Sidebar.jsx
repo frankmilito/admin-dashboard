@@ -14,6 +14,7 @@ import {
   AttachMoney,
 } from '@mui/icons-material/'
 import './sidebar.css'
+import { Link } from 'react-router-dom'
 const Sidebar = () => {
   return (
     <div className='sidebar'>
@@ -21,9 +22,9 @@ const Sidebar = () => {
         <div className='sidebarMenu'>
           <h3 className='sidebarTitle'>Dashboard</h3>
           <ul className='sidebarList'>
-            <li className='sidebarListitem active'>
+            <Link to='/' className='link'><li className='sidebarListitem active'>
               <Home className='sidebarIcon' /> Home
-            </li>
+            </li></Link>
             <li className='sidebarListitem'>
               <Timeline className='sidebarIcon' /> Analytics
             </li>
@@ -35,12 +36,16 @@ const Sidebar = () => {
         <div className='sidebarMenu'>
           <h3 className='sidebarTitle'>Quick Menu</h3>
           <ul className='sidebarList'>
-            <li className='sidebarListitem '>
-              <PermIdentity className='sidebarIcon' /> User
+            <Link to='/users' className='link'>
+              <li className='sidebarListitem '>
+              <PermIdentity className='sidebarIcon' /> Users
             </li>
-            <li className='sidebarListitem'>
+            </Link>
+            <Link to='/products' className='link'>
+              <li className='sidebarListitem'>
               <Storefront className='sidebarIcon' /> Products
             </li>
+            </Link>
             <li className='sidebarListitem'>
               <AttachMoney className='sidebarIcon' /> Transactions
             </li>
