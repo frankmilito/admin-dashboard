@@ -17,7 +17,7 @@ function UserList() {
       renderCell: params => {
         return (
           <div className='userListUser'>
-            <img className='userListUserImg ' src={params.row.avatar} alt='' />
+            <img className='userListUserImg ' src={params.row.avatar} alt='' /> 
             {params.row.username}
           </div>
         )
@@ -57,11 +57,7 @@ function UserList() {
     },
   ]
 
-  React.useEffect(() => {
-    console.log('i ran')
-  }, [])
   const onDeleteHandler = id => {
-    // const filteredData = data.filter(item => item.id !== id)
     let newArr = []
     data.map(item => {
       if (item.id !== id) {
