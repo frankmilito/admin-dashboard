@@ -25,17 +25,6 @@ const Sidebar = () => {
             <Link to='/' className='link'><li className='sidebarListitem active'>
               <Home className='sidebarIcon' /> Home
             </li></Link>
-            <li className='sidebarListitem'>
-              <Timeline className='sidebarIcon' /> Analytics
-            </li>
-            <li className='sidebarListitem'>
-              <TrendingUp className='sidebarIcon' /> Sales
-            </li>
-          </ul>
-        </div>
-        <div className='sidebarMenu'>
-          <h3 className='sidebarTitle'>Quick Menu</h3>
-          <ul className='sidebarList'>
             <Link to='/users' className='link'>
               <li className='sidebarListitem '>
               <PermIdentity className='sidebarIcon' /> Users
@@ -46,6 +35,18 @@ const Sidebar = () => {
               <Storefront className='sidebarIcon' /> Products
             </li>
             </Link>
+          </ul>
+        </div>
+        <div className='sidebarMenu'>
+          <h3 className='sidebarTitle'>Quick Menu</h3>
+          <ul className='sidebarList'>
+            <li className='sidebarListitem'>
+              <Timeline className='sidebarIcon' /> Analytics
+            </li>
+            <li className='sidebarListitem'>
+              <TrendingUp className='sidebarIcon' /> Sales
+            </li>
+            
             <li className='sidebarListitem'>
               <AttachMoney className='sidebarIcon' /> Transactions
             </li>
